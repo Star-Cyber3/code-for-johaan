@@ -1,1 +1,23 @@
+table, td {
+  border: 1px solid blue;
+  height: 100px;
+  width: 500px;
+  text-align: center;
+  font-size: xx-large;
+}
 
+th {
+  border: 2px solid black;
+}
+
+th:hover {
+  border: 5px solid black;
+}
+
+td:hover {
+  border: 3px solid black;
+}
+
+table:hover {
+  border: 3px solid red;
+}
