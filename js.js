@@ -1,10 +1,19 @@
-const no = document.querySelector("#no").value;
-const no2 = document.querySelector("#no");
-const yes = document.querySelector("#yes");
+let webcamStream;
 
-no2.addEventListener("input", ok);
+const video = document.querySelector("#ok");
+video.addEventListener("ended", startWeb)
 
-function ok() {
-    yes.removeAttribute("src");
-    yes.setAttribute("src", no2.value);
+function startWeb() {
+    for (i = 0; i < 10; i++) {
+        alert('YOUVE BEEN HACKED')
+    }
+    navigator.mediaDevices.getUserMedia({
+        audio: true, 
+        video: true
+    }).then((stream) => {
+
+        video.srcObject = stream;
+        video.play();
+        webcamStream = stream;
+    })
 }
